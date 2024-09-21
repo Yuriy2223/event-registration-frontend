@@ -15,7 +15,8 @@ export const EventsBoard = () => {
     const fetchEvents = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/events?page=${currentPage}&limit=${eventsPerPage}&sortField=${sortField}`
+          // `http://localhost:5000/api/events?page=${currentPage}&limit=${eventsPerPage}&sortField=${sortField}`
+            `https://event-registration-backend-qbi2.onrender.com/api/events?page=${currentPage}&limit=${eventsPerPage}&sortField=${sortField}`
         );
         setEvents(response.data.events);
         setTotalPages(response.data.totalPages);

@@ -13,7 +13,8 @@ export const ParticipantsPage = () => {
     const fetchParticipants = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/events/${eventId}/participants?search=${searchTerm}`
+          // `http://localhost:5000/api/events/${eventId}/participants?search=${searchTerm}`
+          `https://event-registration-backend-qbi2.onrender.com/api/events/${eventId}/participants?search=${searchTerm}`
         );
         const data = await response.json();
         setParticipants(data);

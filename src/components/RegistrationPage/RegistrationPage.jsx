@@ -58,7 +58,8 @@ export const RegistrationPage = () => {
 
     try {
       await axios.post(
-        `http://localhost:5000/api/events/${eventId}/register`,
+        // `http://localhost:5000/api/events/${eventId}/register`,
+        `https://event-registration-backend-qbi2.onrender.com/api/events/${eventId}/register`,
         payload
       );
 
