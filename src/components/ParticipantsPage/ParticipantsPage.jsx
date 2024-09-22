@@ -26,7 +26,8 @@ export const ParticipantsPage = () => {
     const fetchEventData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/events/${eventId}`
+          // `http://localhost:5000/api/events/${eventId}`
+          `https://event-registration-backend-qbi2.onrender.com/api/events/${eventId}`
         );
         const eventData = await response.json();
         setEventTitle(eventData.title);
